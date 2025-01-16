@@ -210,11 +210,9 @@ void Cluster::send(const BinTree<pair<string, int>>& a,const int& pmemo, const i
                         aux = count;
                         free = freeaux;
                     }
-                    else if (freeaux == free) {
-                        if (count < aux) {
-                            candidato = it->first;
-                            aux = count;
-                        }
+                    else if (freeaux == free and count < aux) {
+                        candidato = it->first;
+                        aux = count;
                     }
                 }
             }
